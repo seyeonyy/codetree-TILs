@@ -8,9 +8,10 @@ public class Main {
         int c = sc.nextInt();
 
         int med = 0;
-        if(b < a && a < c){
+
+        if(b < a && a < c || c < a && a < b){
             med = a;
-        } else if(a < b && b < c){
+        } else if(a < b && b < c || c < b && b < a){
             med = b;
         } else{
             med = c;
