@@ -32,7 +32,7 @@ public class Main {
         }else if(thirdFlu == 'Y' && thirdTemp >= 37){
             if(firstFlu == 'Y' && firstTemp >= 37){
                 System.out.println("E");
-            }else if(thirdFlu == 'Y' && thirdTemp >= 37){
+            }else if(secondFlu == 'Y' && secondTemp >= 37){
                 System.out.println("E");
             }else{
                 System.out.println("N");
