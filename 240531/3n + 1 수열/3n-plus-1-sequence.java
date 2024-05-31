@@ -8,14 +8,12 @@ public class Main {
         while(true){
             if(N % 2 == 0){
                 N /= 2;
-                count++;
+            } else if(N == 1){
+                break;
             } else{
                 N = N * 3 + 1;
-                count++;
             }
-            if(N == 1){
-                break;
-            }
+            count++;
         }
         System.out.println(count);
     }
