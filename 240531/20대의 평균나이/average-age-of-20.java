@@ -8,10 +8,11 @@ public class Main {
         int count = 1;
         while(true){
             int age = sc.nextInt();
-            if(age >= 30){
+            if(20 <= age && age <= 29){
+                sum += age;
+            } else{
                 break;
             }
-            sum += age;
             avg = (double)sum / count;
             count++;
         }
