@@ -8,7 +8,9 @@ public class Main {
         for(int i = 1; i <= n; i++){
             sum += i;
             if(sum >= n){
-                sum -= i;
+                if(i != n){
+                    sum -= i;
+                }
                 System.out.println(sum);
                 break;
             }
