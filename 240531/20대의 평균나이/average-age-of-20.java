@@ -5,15 +5,15 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int sum = 0;
         double avg = 0;
-        int count = 0;
+        int count = 1;
         while(true){
             int age = sc.nextInt();
-            count++;
             if(age >= 30){
                 break;
             }
             sum += age;
             avg = (double)sum / count;
+            count++;
         }
         System.out.printf("%.2f", avg);
     }
