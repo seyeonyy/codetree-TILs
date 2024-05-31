@@ -7,11 +7,11 @@ public class Main {
         int prod = 2;
         int x = 1;
         while(true){
-            prod *= 2;
-            x++;
             if(prod == n){
                 break;
             }
+            prod *= 2;
+            x++;
         }
         System.out.println(x);
     }
