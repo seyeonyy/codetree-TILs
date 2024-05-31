@@ -7,13 +7,11 @@ public class Main {
         int sum = 0;
         for(int i = 1; i <= n; i++){
             sum += i;
-            if(sum >= n){
-                if(i != n){
-                    sum -= i;
-                }
-                System.out.println(sum);
+            if(sum >= n && n != 1){
+                sum -= i;
                 break;
             }
         }
+        System.out.println(sum);
     }
 }
