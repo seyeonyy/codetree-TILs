@@ -7,8 +7,14 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int prod = a;
-        for(int i = 1; i< b; i++){
+        
+        if(b == 0){
+            a = 1;
+        }
+        else{
+            for(int i = 1; i< b; i++){
             a *= prod;
+            }
         }
         System.out.println(a);
     }
