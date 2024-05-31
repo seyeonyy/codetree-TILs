@@ -9,8 +9,8 @@ public class Main {
         boolean exists = false;
 
         for(int i = a; i <= b; i++){
-            if(i % c != 0){
-                exists = false;
+            if(i % c == 0){
+                exists = true;
             }
         }
         if(exists == false){
