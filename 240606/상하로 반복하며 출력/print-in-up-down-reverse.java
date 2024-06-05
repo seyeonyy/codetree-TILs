@@ -11,7 +11,7 @@ public class Main {
                     System.out.print(1+i);
                 }
                 else{
-                    System.out.print(4-i);
+                    System.out.print(n-i);
                 }
             }
             System.out.println();
