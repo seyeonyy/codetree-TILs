@@ -15,8 +15,8 @@ public class Main {
                 }
             }
             if(sum == i){
-                    count++;
-                }
+                count++;
+            }
         }
         System.out.println(count);
     }
