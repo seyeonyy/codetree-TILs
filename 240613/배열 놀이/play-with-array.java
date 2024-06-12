@@ -6,16 +6,17 @@ public class Main {
         int n = sc.nextInt();
         int q = sc.nextInt();
         int[] arr = new int[n];
+        boolean count = false;
+        int cnt = q;
 
         for(int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
         }
 
         for(int i = 0; i < n; i++){
-            if(q == 0){
+            if(cnt == 0){
                 break;
             }
-            boolean count = false;
             int num = sc.nextInt();
             if(num == 1){
                 int a = sc.nextInt();
@@ -40,7 +41,7 @@ public class Main {
                 }
             }
             System.out.println();
-            q--;
+            cnt--;
         }
     }
 }
