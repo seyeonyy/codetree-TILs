@@ -27,7 +27,7 @@ public class Main {
                     if(arr[k] == b){
                         System.out.print(k+1);
                         count = true;
-                        continue;
+                        break;
                     }
                 }
                 if(count == false){
