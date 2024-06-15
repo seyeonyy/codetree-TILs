@@ -4,28 +4,19 @@ public class Main {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        int[] arr = new int[N];
-        int max = 1;
+        int[] arr = new int[N+1];
         int idx = 0;
+        int max = 0;
 
         for(int i = 0; i < N; i++){
-            arr[i] = sc.nextInt();
+            idx = sc.nextInt();
+            arr[idx]++;
         }
-        for(int i = 0; i < N; i++){
-            int count = 1;
-            for(int j = 0; j < N; j++){
-                if(arr[j] > max){
-                    max = arr[j];
-                    idx = j;
-                }
-            }
-            for(int k = 0; k < N; k++){
-                if(k != idx && arr[k] == max){
-                    count++;
-                }
-                if(count >= 2){
-                    max = -1;
-                }
+        max = -1;
+        for(int i = N; i > 0; i--){
+            if (arr[i] == 1){
+                max = i;
+                break;
             }
         }
         System.out.println(max);
