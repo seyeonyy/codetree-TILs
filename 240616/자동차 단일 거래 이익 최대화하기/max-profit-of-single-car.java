@@ -17,7 +17,6 @@ public class Main {
                 idx = i;
             }
         }
-        System.out.println(min);
         double max = 0;
         for(int i = idx+1; i < n; i++){
             if(arr[i] > max){
