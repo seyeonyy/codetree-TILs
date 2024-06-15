@@ -17,14 +17,15 @@ public class Main {
                 idx = i;
             }
         }
-        int max = 0;
+        System.out.println(min);
+        double max = 0;
         for(int i = idx+1; i < n; i++){
             if(arr[i] > max){
                 max = arr[i];
             }
         }
         if(max != 0){
-            int ans = max - (int)min;
+            int ans =(int)max - (int)min;
             System.out.print(ans);
         }else{
             System.out.print(0);
