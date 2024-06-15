@@ -10,24 +10,15 @@ public class Main {
         for(int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
         }
+        int max = 0;
         double min = Math.pow(2,31)-1;
         for(int i = 0; i < n; i++){
-            if(arr[i] < min){
-                min = arr[i];
-                idx = i;
+            for(int j = i+1; j < n; j++){
+                if(arr[j]-arr[i] > max){
+                    max = arr[j] - arr[i];
+                }
             }
         }
-        double max = 0;
-        for(int i = idx+1; i < n; i++){
-            if(arr[i] > max){
-                max = arr[i];
-            }
-        }
-        if(max != 0){
-            int ans =(int)max - (int)min;
-            System.out.print(ans);
-        }else{
-            System.out.print(0);
-        }
+        System.out.print(max);
     }
 }
