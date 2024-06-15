@@ -15,22 +15,11 @@ public class Main {
         }
         int ans = 1001;
         for(int i = 1000; i >= 0; i--){
-            if(count[i] >= 2){
-                for(int j = 0; j < ans-1; j++){
-                    if(i == nums[j]){
-                        ans = j+1;
-                        System.out.print(ans + " ");
-                        break;
-                    }
-                }
-            }
-            else{
-                for(int j = 0; j < ans-1; j++){
-                    if(i == nums[j]){
-                        ans = j+1;
-                        System.out.print(ans + " ");
-                        break;
-                    }
+            for(int j = 0; j < ans-1; j++){
+                if(i == nums[j]){
+                    ans = j+1;
+                    System.out.print(ans + " ");
+                    break;
                 }
             }
         }
