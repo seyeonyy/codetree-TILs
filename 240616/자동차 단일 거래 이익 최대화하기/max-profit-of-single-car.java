@@ -11,7 +11,6 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         int max = 0;
-        double min = Math.pow(2,31)-1;
         for(int i = 0; i < n; i++){
             for(int j = i+1; j < n; j++){
                 if(arr[j]-arr[i] > max){
