@@ -13,10 +13,8 @@ public class Main {
         char c = 'a';
         int count = 0;
         for(int i = 0; i < n; i++){
-            for(int j = 0; j < arr[i].length(); j++){
-                if(arr[i].charAt(j) == c){
-                    count++;
-                }
+            if(arr[i].charAt(0) == c){
+                count++;
             }
         }
         System.out.println(sum + " " + count);
