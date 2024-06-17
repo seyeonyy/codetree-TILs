@@ -18,7 +18,7 @@ public class Main {
                 sum += arr[i].length();
             }
         }
-        avg = sum / count;
+        avg = (double)sum / count;
         System.out.printf("%d %.2f", count, avg);
     }
 }
