@@ -16,19 +16,18 @@ public class Main {
         }
         int idx = 0;
         for(int i = 0; i < n1; i++){
-            if(idx == n2){
-                break;
-            }
             if(arr1[i] == arr2[idx]){
                 idx++;
             }else{
                 idx = 0;
             }
+            if(idx == n2){
+                System.out.print("Yes");
+                break;
+            }
         }
-        if(idx == 0){
+        if(idx != n2){
             System.out.print("No");
-        }else{
-            System.out.print("Yes");
         }
     }
 }
