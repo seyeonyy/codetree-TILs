@@ -7,10 +7,10 @@ public class Main {
 
         for(int i = 0; i < 10; i++){
             int n = sc.nextInt();
-            arr2[n-1]++;
+            arr2[n]++;
         }
         for(int i = 1; i <= 6; i++){
-            System.out.println(i + " - " + arr2[i-1]);
+            System.out.println(i + " - " + arr2[i]);
         }
     }
 }
