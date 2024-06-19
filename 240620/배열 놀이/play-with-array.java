@@ -21,13 +21,10 @@ public class Main {
                 for(int k = 0; k < n; k++){
                     if(arr[k] == b){
                         idx = k+1;
-                        System.out.print(idx);
                         break;
                     }
                 }
-                if(idx == 0){
-                    System.out.print(idx);
-                }
+                System.out.print(idx);
             }else if(num == 3){
                 int s = sc.nextInt();
                 int e = sc.nextInt();
