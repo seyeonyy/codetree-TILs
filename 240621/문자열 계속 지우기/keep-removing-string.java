@@ -19,8 +19,8 @@ public class Main {
                     A = A.substring(0, i) + A.substring(i+lenB);
                     lenA = A.length();
                     i = -1;
-                    count = 1;
                 }
+                count = 1;
             }
         }
         System.out.print(A);       
