@@ -14,7 +14,7 @@ public class Main {
             min = a;
         }else if(b <= a && a <= c || b <= c && c <= a){
             min = b;
-        }else if(c <= a && a <= b || c <= b && b <= c){
+        }else if(c <= a && a <= b || c <= b && b <= a){
             min = c;
         }
         return min;
