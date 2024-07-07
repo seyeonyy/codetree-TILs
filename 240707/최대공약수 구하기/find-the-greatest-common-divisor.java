@@ -9,7 +9,7 @@ public class Main {
     }
     public static void gcd(int n, int m){
         int num = 0;
-        for(int i = 1; i < Math.sqrt(n) * Math.sqrt(m); i++){
+        for(int i = 1; i <= Math.sqrt(n) * Math.sqrt(m); i++){
             if(n % i == 0 && m % i == 0){
                 num = i;
             }
