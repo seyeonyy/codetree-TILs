@@ -13,7 +13,7 @@ public class Main {
         }
     }
     public static boolean year(int Y){
-        if(Y % 4 == 0 && Y % 100 != 0 || Y % 4 == 0 && Y % 100 == 0 && Y % 400 == 0){
+        if(Y % 4 == 0 && Y % 100 != 0 || Y % 4 == 0 && Y % 100 == 0 && Y % 400 == 0 || !(Y % 4 == 0 && Y % 100 == 0)){
             return true;
         }
         return false;
