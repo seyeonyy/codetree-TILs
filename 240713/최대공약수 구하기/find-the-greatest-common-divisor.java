@@ -12,13 +12,17 @@ public class Main {
         int num2 = 1;
         if(n > m){
             num = n % m;
-            while(num2 != 0){
-                num2 = m % num;
+            if(num != 0){
+                while(num2 != 0){
+                    num2 = m % num;
+                }
             }
         }else{
             num = m % n;
-            while(num2 != 0){
-                num2 = n % num;
+            if(num != 0){
+                while(num2 != 0){
+                    num2 = n % num;
+                }
             }
         }
         System.out.print(num);
