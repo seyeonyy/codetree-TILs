@@ -9,15 +9,23 @@ public class Main {
     }
     public static void gcd(int n, int m){
         int num = 1;
-        int num2 = 1;
+        int num2 = 0;
         if(n > m){
-            while(num != 0){
-                num = n % m;
+            num = n % m;
+            if(num != 0){
+                while(num2 != 0){
+                    num2 = m % num;
+                }
+                System.out.print(num);
             }
             System.out.print(m);
         }else{
-            while(num != 0){
-                num = m % n;
+            num = m % n;
+            if(num != 0){
+                while(num2 != 0){
+                    num2 = n % num;
+                }
+                System.out.print(num);
             }
             System.out.print(n);
         }
