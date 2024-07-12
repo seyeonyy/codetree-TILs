@@ -8,26 +8,23 @@ public class Main {
         gcd(n, m);
     }
     public static void gcd(int n, int m){
-        int num = 1;
-        int num2 = 0;
+        int tmp = 0;
+        int num = 0;
         if(n > m){
-            num = n % m;
-            if(num != 0){
-                while(num2 != 0){
-                    num2 = m % num;
-                }
-                System.out.print(num);
+            while(m != 0){
+                tmp = n % m;
+                num = m;
+                n = m;
+                m = tmp;
             }
-            System.out.print(m);
         }else{
-            num = m % n;
-            if(num != 0){
-                while(num2 != 0){
-                    num2 = n % num;
-                }
-                System.out.print(num);
+            while(n != 0){
+                tmp = m % n;
+                num = n;
+                m = n;
+                n = tmp;
             }
-            System.out.print(n);
         }
+        System.out.print(num);
     }
 }
