@@ -11,20 +11,15 @@ public class Main {
         int num = 1;
         int num2 = 1;
         if(n > m){
-            num = n % m;
-            if(num != 0){
-                while(num2 != 0){
-                    num2 = m % num;
-                }
+            while(num != 0){
+                num = n % m;
             }
+            System.out.print(m);
         }else{
-            num = m % n;
-            if(num != 0){
-                while(num2 != 0){
-                    num2 = n % num;
-                }
+            while(num != 0){
+                num = m % n;
             }
+            System.out.print(n);
         }
-        System.out.print(num);
     }
 }
