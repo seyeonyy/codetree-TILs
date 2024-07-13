@@ -12,7 +12,7 @@ public class Main {
     }
     public static boolean judge(String A){
         for(int i = 0; i < A.length(); i++){
-            int cnt = 0;
+            int cnt = 1;
             for(int j = i+1; j < A.length(); j++){
                 if(A.charAt(i) != A.charAt(j)){
                     cnt++;
