@@ -7,20 +7,20 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        sum = m;
         for(int i = 0; i < n; i++){
             A[i] = sc.nextInt();
         }
         System.out.println(modify(A, m));
     }
     public static int modify(int[] A, int m){
+        sum += A[m-1];
         while(m != 1){
             if(m % 2 == 1){
                 m -= 1;
             }else{
                 m /= 2;
             }
-            sum += A[m];
+            sum += A[m-1];
         }
         return sum;
     }
