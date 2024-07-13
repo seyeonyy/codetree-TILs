@@ -9,12 +9,13 @@ public class Main {
     }
     public static int str(String N, String M){
         int count = 0;
-        int num = 0;
         for(int i = 0; i < N.length(); i++){
             int cnt = 0;
             for(int j = 0; j < M.length(); j++){
+                if(i+cnt >= N.length()){
+                    return -1;
+                }
                 if(N.charAt(i+cnt) != M.charAt(j)){
-                    num = j;
                     break;
                 }else{
                     cnt++;
@@ -22,9 +23,6 @@ public class Main {
                 if(cnt == M.length()){
                     return i;
                 }
-            }
-            if(cnt > num){
-                return -1;
             }
         }
         return -1;
