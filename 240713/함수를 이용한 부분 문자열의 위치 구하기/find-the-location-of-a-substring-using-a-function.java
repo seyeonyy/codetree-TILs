@@ -14,6 +14,7 @@ public class Main {
             int cnt = 0;
             for(int j = 0; j < M.length(); j++){
                 if(N.charAt(i+cnt) != M.charAt(j)){
+                    num = j;
                     break;
                 }else{
                     cnt++;
@@ -21,9 +22,9 @@ public class Main {
                 if(cnt == M.length()){
                     return i;
                 }
-                if(cnt > j){
-                    return -1;
-                }
+            }
+            if(cnt > num){
+                return -1;
             }
         }
         return -1;
