@@ -8,17 +8,19 @@ public class Main {
         System.out.println(str(N,M));
     }
     public static int str(String N, String M){
-        int cnt = 0;
         int count = 0;
-        for(int i = 0; i <= N.length(); i++){
-            if(N.charAt(i-count) == M.charAt(cnt)){
-                cnt++;
-            }else{
-                count = 1;
-                cnt = 0;
-            }
-            if(cnt == M.length()){
-            return i-M.length();
+        int num = 0;
+        for(int i = 0; i < N.length(); i++){
+            int cnt = 0;
+            for(int j = 0; j < M.length(); j++){
+                if(N.charAt(i+cnt) != M.charAt(j)){
+                    break;
+                }else{
+                    cnt++;
+                }
+                if(cnt == M.length()){
+                    return i;
+                }
             }
         }
         return -1;
