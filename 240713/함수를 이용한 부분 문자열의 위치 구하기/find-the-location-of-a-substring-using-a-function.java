@@ -9,14 +9,16 @@ public class Main {
     }
     public static int str(String N, String M){
         int cnt = 0;
-        for(int i = 0; i < N.length(); i++){
-            if(M.charAt(cnt) == N.charAt(i)){
+        int count = 0;
+        for(int i = 0; i <= N.length(); i++){
+            if(N.charAt(i-count) == M.charAt(cnt)){
                 cnt++;
             }else{
+                count = 1;
                 cnt = 0;
             }
             if(cnt == M.length()){
-            return i-M.length()+1;
+            return i-M.length();
             }
         }
         return -1;
