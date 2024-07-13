@@ -21,6 +21,9 @@ public class Main {
                 if(cnt == M.length()){
                     return i;
                 }
+                if(cnt > j){
+                    return -1;
+                }
             }
         }
         return -1;
