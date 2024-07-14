@@ -27,7 +27,6 @@ public class Main {
             }else if(remain % 10 == 3 || remain % 10 == 6 || remain % 10 == 9){
                 return true;
             }
-
         }
         return false;
     }
