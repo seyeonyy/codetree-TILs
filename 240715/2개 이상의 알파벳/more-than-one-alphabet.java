@@ -11,12 +11,8 @@ public class Main {
         }
     }
     public static boolean judge(String A){
-        int cnt = 1;
         for(int i = 0; i < A.length(); i++){
             if(A.charAt(i) != A.charAt(0)){
-                cnt++;
-            }
-            if(cnt >= 2){
                 return true;
             }
         }
