@@ -11,7 +11,7 @@ public class Main {
     public static int isSum(int a, int b){
         int sum = 0;
         for(int i = a; i <= b; i++){
-            if(isPrime(i)){
+            if(isPrime(i) && a != 1 && b != 1){
                 sum += arr[i];
             }
         }
