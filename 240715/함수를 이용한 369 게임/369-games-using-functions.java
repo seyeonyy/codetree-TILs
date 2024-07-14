@@ -14,19 +14,14 @@ public class Main {
         System.out.println(cnt);
     }
     public static boolean isRemainNumber(int n){
-        int share = 0;
-        int remain = 0;
-        for(int i = 10; i <= 100000; i*=10){
-            if(n % 3 == 0){
+        if(n % 3 == 0){
+            return true;
+        }
+        for(int i = 10; i <= 1000000; i*=10){
+            if(n % 10 == 3 || n % 10 == 6 || n % 10 == 9){
                 return true;
             }
-            share = n / i;
-            remain = n % i;
-            if(share % 10 == 3 || share % 10 == 6 || share % 10 == 9){
-                return true;
-            }else if(remain % 10 == 3 || remain % 10 == 6 || remain % 10 == 9){
-                return true;
-            }
+            n /= 10;
         }
         return false;
     }
