@@ -11,15 +11,14 @@ public class Main {
         for(int i = 1; i <= n; i++){
             numbers[i] = sc.nextInt();
         }
-        maxNum(n);
-        System.out.println(max);
+        System.out.println(maxNum(n));
     }
     public static int maxNum(int n){
-        if(n == 1){
-            return numbers[1];
-        }
         if(numbers[n] > max){
             max = numbers[n];
+        }
+        if(n == 1){
+            return max;
         }
         return maxNum(n-1);
     }
