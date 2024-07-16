@@ -14,7 +14,7 @@ public class Main {
         if(n == 2){
             return 2;
         }
-        return n + evenSum(n/2);  
+        return n + evenSum(n-2);  
     }
     public static int oddSum(int n){
         if(n == 1){
