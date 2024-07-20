@@ -7,9 +7,15 @@ public class Main {
         int n = sc.nextInt();
         int k = sc.nextInt();
         String T = sc.next();
+        // System.out.println(String.format("T: %s", T));
         String[] str = new String[n];
         for(int i = 0; i < n; i++){
-            str[i] = sc.next();
+            try {
+                str[i] = sc.next();
+            } catch (Exception ex) {
+                System.out.println(String.format("Current i: %d, n: %d, k: %d, T: %s", i, n, k, T));
+            }
+            // System.out.println(String.format("str[%d]: %s", i, str[i]));
         }
         Arrays.sort(str);
         String[] str2 = new String[n];
