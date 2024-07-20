@@ -14,7 +14,7 @@ public class Main {
         Arrays.sort(str);
         String[] str2 = new String[n];
         for(int i = 0; i < n; i++){
-            if(str[i].contains(T)){
+            if(str[i].substring(0,T.length()).equals(T)){
                 str2[i] = str[i];
             }
         }
