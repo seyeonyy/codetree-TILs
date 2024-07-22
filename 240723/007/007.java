@@ -7,9 +7,6 @@ class Print{
         this.secretCode = secretCode;
         this.meetingPoint = meetingPoint;
         this.time = time;
-        System.out.println("secret code : " + this.secretCode);
-        System.out.println("meeting point : " + this.meetingPoint);
-        System.out.println("time : " + this.time);
     }
 }
 public class Main {
@@ -20,5 +17,8 @@ public class Main {
         char meetingPoint = sc.next().charAt(0);
         int time = sc.nextInt();
         Print p = new Print(secretCode, meetingPoint, time);
+        System.out.println("secret code : " + p.secretCode);
+        System.out.println("meeting point : " + p.meetingPoint);
+        System.out.println("time : " + p.time);
     }
 }
