@@ -12,6 +12,7 @@ public class Main {
             int num = i+1;
             students[i] = new Student(h, w, num);    
         }
+        Arrays.sort(students);
         for(int i = 0; i < n; i++){
             System.out.println(students[i].h + " " + students[i].w + " " + students[i].num);
         }
