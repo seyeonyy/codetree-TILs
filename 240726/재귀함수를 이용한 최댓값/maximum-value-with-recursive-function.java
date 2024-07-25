@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+    public static int n = 0;
+    public static int[] numbers = new int[101];
+    public static int max = numbers[n];
+    public static void main(String[] args) {
+        // 여기에 코드를 작성해주세요.
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        for(int i = 1; i <= n; i++){
+            numbers[i] = sc.nextInt();
+        }
+        System.out.println(maxNum(n, max));
+    }
+    public static int maxNum(int n, int max){
+        if(numbers[n] > max){
+            max = numbers[n];
+        }
+        if(n == 1){
+            return max;
+        }
+        return maxNum(n-1, max);
+    }
+}
