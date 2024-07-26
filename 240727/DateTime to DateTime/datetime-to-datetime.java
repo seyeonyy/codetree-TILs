@@ -10,7 +10,7 @@ public class Main {
         int hour = 11;
         int minute = 11;
         int elapsedTime = 0;
-        if(a <= day && (b <= hour || c < minute)){
+        if(a <= day && (b < hour || c < minute)){
             elapsedTime = -1;
         }else{
             while(true){
