@@ -32,15 +32,15 @@ public class Main {
             while(true){
                 d1++;
                 day++;
+                if(day == 7){
+                    day = 0;
+                }
                 if(m1 == m2 && d1 == d2){
                     break;
                 }
                 if(days[m1] == d1){
                     m1++;
                     d1 = 0;   
-                }
-                if(day == 7){
-                    day = 0;
                 }
             }
         }
