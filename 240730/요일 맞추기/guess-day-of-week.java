@@ -10,7 +10,10 @@ public class Main {
         String[] dow = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
         int[] days = new int[]{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         int day = 1;
-        if(m2 <= m1 || d2 < d1){
+        if(m2 == m1 && d2 == d1){
+            day = 1;
+        }
+        else if(m2 <= m1 || d2 < d1){
             while(true){
                 day--;
                 d1--;
