@@ -13,7 +13,7 @@ public class Main {
         if(m2 == m1 && d2 == d1){
             day = 1;
         }
-        else if(m2 <= m1 || d2 < d1){
+        else if(m2 < m1 || d2 < d1){
             while(true){
                 day--;
                 d1--;
