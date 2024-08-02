@@ -16,13 +16,13 @@ public class Main {
             for(int j = x1; j <= x2-1; j++){
                 line[j] += cnt;
             }
-            for(int j = x1; j <= x2-1; j++){
-                if(line[j] > cnt){
-                    count++;
-                    break;
-                }
+        }
+        int max = 0;
+        for(int i = 0; i < 201; i++){
+            if(line[i] > max){
+                max = line[i];
             }
         }
-        System.out.print(count);
+        System.out.print(max);
     }
 }
