@@ -10,12 +10,12 @@ public class Main {
             int x = sc.nextInt();
             char c = sc.next().charAt(0);
             if(c == 'R'){
-                for(int j = line+1; j <= line+x-1; j++){
+                for(int j = line; j <= line+x-1; j++){
                     lines[j] += 1;
                 }
                 line = line+x;
             }else{
-                for(int j = line; j >= line-x+1; j--){
+                for(int j = line-1; j >= line-x; j--){
                     lines[j] += 1;
                 }
                 line = line-x;
