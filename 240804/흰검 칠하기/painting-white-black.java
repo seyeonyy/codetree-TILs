@@ -2,7 +2,6 @@ import java.util.Scanner;
 public class Main {
     public static int[] W = new int[1000*100*2+1];
     public static int[] B = new int[1000*100*2+1];
-    public static int[] G = new int[1000*100*2+1];
     public static char[] tiles = new char[1000*100*2+1];
     public static int tile = 1000*100;
     public static void main(String[] args) {
@@ -27,7 +26,6 @@ public class Main {
                         B[j] = 0;
                         W[j] = 0;
                         tiles[j] = 'G';
-                        G[j] += 1;
                     }
                 }
                 tile = tile +x-1;
@@ -43,15 +41,11 @@ public class Main {
                         B[j] = 0;
                         W[j] = 0;
                         tiles[j] = 'G';
-                        G[j] += 1;
                     }
                 }
                 tile = tile-x+1;
             }
         }
-        /*for(int i = 100000-3; i<= 100000+2; i++){
-            System.out.println(tiles[i]);
-        }*/
         for(int i = 0; i < 200001; i++){
             if(tiles[i] == 'W'){
                 cntW++;
