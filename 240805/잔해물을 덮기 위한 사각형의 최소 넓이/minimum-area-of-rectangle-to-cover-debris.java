@@ -38,6 +38,10 @@ public class Main {
                 }
             }
         }
-        System.out.println((maxX-minX+1)*(maxY-minY+1));
+        if(minX == 0 && maxX == 0 && minY == 0 && maxY == 0){
+            System.out.println(maxX);
+        }else{
+            System.out.println((maxX-minX+1)*(maxY-minY+1));
+        }
     }
 }
