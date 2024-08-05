@@ -12,15 +12,18 @@ public class Main {
         }
         int cnt = 1;
         int max = 0;
-        for(int i = 1; i < N; i++){
-            if(arr[i] == arr[i-1]){
-                cnt++;
-            }
-            if(max < cnt){
-                max = cnt;
-            }
-            if(arr[i] != arr[i-1]){
-                cnt = 1;
+        if(N == 1){
+            max = cnt;
+        }else{
+            for(int i = 1; i < N; i++){
+                if(arr[i] != arr[i-1]){
+                    cnt = 1;
+                }else{
+                    cnt++;
+                }
+                if(max < cnt){
+                    max = cnt;
+                }
             }
         }
         System.out.println(max);
