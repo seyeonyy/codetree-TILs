@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Main {
     public static final int OFFSET = 1000;
     public static int[][] square1 = new int[OFFSET*2+1][OFFSET*2+1];
-    public static int[][] square2 = new int[OFFSET*2+1][OFFSET*2+1];
+    //public static int[][] square2 = new int[OFFSET*2+1][OFFSET*2+1];
     public static int x1;
     public static int y1;
     public static int x2;
@@ -14,8 +14,8 @@ public class Main {
         y1 = sc.nextInt();
         x2 = sc.nextInt();
         y2 = sc.nextInt();
-        for(int j = OFFSET+y1; j <= OFFSET+y2-1; j++){
-            for(int k = OFFSET+x1; k <= OFFSET+x2-1; k++){
+        for(int j = OFFSET+y1; j < OFFSET+y2; j++){
+            for(int k = OFFSET+x1; k < OFFSET+x2; k++){
                 square1[j][k] += 1;
             }
         }
@@ -23,9 +23,9 @@ public class Main {
         y1 = sc.nextInt();
         x2 = sc.nextInt();
         y2 = sc.nextInt();
-        for(int j = OFFSET+y1; j <= OFFSET+y2-1; j++){
-            for(int k = OFFSET+x1; k <= OFFSET+x2-1; k++){
-                square2[j][k] += 1;
+        for(int j = OFFSET+y1; j < OFFSET+y2; j++){
+            for(int k = OFFSET+x1; k < OFFSET+x2; k++){
+                square1[j][k] += 2;
             }
         }
         /*for(int i = OFFSET-1; i < OFFSET+11; i++){
@@ -40,14 +40,18 @@ public class Main {
                 if(square1[i][j] == 1){
                     cnt1++;
                 }
-                if(square1[i][j] == square2[i][j] && square1[i][j] == 1){
+                if(square1[i][j] == 3){
                     cnt2++;
                 }
             }
         }
-        if(cnt1 == cnt2){
-            cnt1 = 0;
+        if(cnt1 < cnt2){
+            cnt1 = cnt1;
+        }else if(cnt1 > cnt2){
+            cnt1 += cnt2;
+        }else{
+            cnt1-= cnt2;
         }
-        System.out.print(cnt1);
+        System.out.println(cnt1);
     }
 }
