@@ -27,6 +27,7 @@ public class Main {
             for(int k = OFFSET+x1; k < OFFSET+x2; k++){
                 if(square1[j][k] == 1){
                     square2[j][k] = 2;
+                    square1[j][k] = 0;
                     continue;
                 }
                 square2[j][k] = 1;
@@ -35,7 +36,6 @@ public class Main {
         int cnt1 = 0;
         int cnt3 = 0;
         int cnt2 = 0;
-        int cnt4 = 0;
         for(int i = 0; i < OFFSET*2+1; i++){
             for(int j = 0; j < OFFSET*2+1; j++){
                 if(square2[i][j] >= 1){
@@ -49,11 +49,13 @@ public class Main {
                 }
             }
         }
-        if(cnt2 > cnt1){
+        if(cnt1 == 0){
+            System.out.println(cnt1);
+        }else if(cnt2+cnt3 > cnt1){
+            cnt1 += cnt3;
             System.out.println(cnt1);
         }else{
-            cnt4 = cnt1 - cnt3;
-            System.out.println(cnt4);
+            System.out.println(cnt1);
         }
     }
 }
