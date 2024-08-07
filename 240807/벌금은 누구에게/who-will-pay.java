@@ -16,9 +16,16 @@ public class Main {
         for(int i = 0; i < m; i++){
             num[arr[i]]++;
         }
-        for(int i = 1; i <= n; i++){
-            if(num[i] >= k){
-                idx = i;
+        for(int i = 0; i < m; i++){
+            for(int j = 1; j <= n; j++){
+                if(arr[i] == j){
+                    if(num[j] >= k){
+                        idx = j;
+                        break;
+                    }
+                }
+            }
+            if(idx != -1){
                 break;
             }
         }
