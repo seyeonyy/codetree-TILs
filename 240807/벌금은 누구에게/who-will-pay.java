@@ -15,8 +15,6 @@ public class Main {
         int idx = -1;
         for(int i = 0; i < m; i++){
             num[arr[i]]++;
-        }
-        for(int i = 0; i < m; i++){
             if(num[arr[i]] >= k){
                 idx = arr[i];
                 break;
