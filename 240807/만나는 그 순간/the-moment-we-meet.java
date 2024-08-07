@@ -49,17 +49,19 @@ public class Main {
                 t2 += t;
             }
         }
+        int max = 0;
+        if(t1 > t2){
+            max = t1;
+        }else{
+            max = t2;
+        }
         int idx = -1;
-        for(int i = 1; i < 1001; i++){
+        for(int i = 1; i <= max; i++){
             if(arr1[i] == arr2[i]){
                 idx = i;
-                System.out.println(idx);
                 break;
             }
-            if(i == 1000 && idx == -1){
-                System.out.println(idx);
-            }
         }
+        System.out.println(idx);
     }
-        
 }
