@@ -21,7 +21,6 @@ public class Main {
                     cnt++;
                 }
             }
-            num[i] = cnt;
             if(cnt >= k){
                 idx = i;
                 break;
