@@ -38,6 +38,16 @@ public class Main {
             cng = 1;
         }else if(N[1] < M[1]){
             cng = 2;
+        }else{
+            for(int i = 1; i <= t1; i++){
+                if(N[i] > M[i]){
+                    cng = 1;
+                    break;
+                }else if(N[i] < M[i]){
+                    cng = 2;
+                    break;
+                }
+            }
         }
         for(int i = 2; i <= t1; i++){
             if(N[i] > M[i]){
