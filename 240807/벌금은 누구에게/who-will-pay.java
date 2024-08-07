@@ -17,15 +17,8 @@ public class Main {
             num[arr[i]]++;
         }
         for(int i = 0; i < m; i++){
-            for(int j = 1; j <= n; j++){
-                if(arr[i] == j){
-                    if(num[j] >= k){
-                        idx = j;
-                        break;
-                    }
-                }
-            }
-            if(idx != -1){
+            if(num[arr[i]] >= k){
+                idx = arr[i];
                 break;
             }
         }
