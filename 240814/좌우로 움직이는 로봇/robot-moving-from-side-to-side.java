@@ -42,41 +42,71 @@ public class Main {
         }else if(A[1] < A[2]){
             cng1 = 2;
         }
+        int cng2 = 0;
+        if(B[1] > B[2]){
+            cng2 = 1;
+        }else if(B[1] < B[2]){
+            cng2 = 2;
+        }
         int max = 0;
         if(timeA > timeB){
             max = timeA;
         }else{
             max = timeB;
         }
-        int count = 0;
-        for(int i = 2; i <= max; i++){
-            if(i == max){
-                break;
+        if(max == timeA){
+            for(int i = timeB; i < timeA; i++){
+                B[i] = B[timeB-1];
             }
-            if(A[i] > A[i+1]){
-                if(cng1 == 2){
-                    if(A[i] == B[i]){
-                        count++;
-                    }
-                    if(i >= timeA-1){
-                        if(A[timeA-1] == B[i]){
+        }else{
+            for(int i = timeA; i < timeB; i++){
+                A[i] = A[timeA-1];
+            }
+        }
+        int count = 0;
+        if(max == timeB){
+            for(int i = 2; i <= max; i++){
+                if(i == max){
+                    break;
+                }
+                if(B[i] > B[i+1]){
+                    if(cng2 == 2){
+                        if(A[i] == B[i]){
                             count++;
+                            cng2 = 1;
+                        }
+                    }
+
+                }else if(B[i] < B[i+1]){
+                    if(cng2 == 1){
+                        if(A[i] == B[i]){
+                            count++;
+                            cng2 = 2;
                         }
                     }
                 }
-                cng1 = 1;
-            }else if(A[i] < A[i+1]){
-                if(cng1 == 1){
-                    if(A[i] == B[i]){
-                        count++;
-                    }
-                    if(i >= timeA-1){
-                        if(A[timeA-1] == B[i]){
+            }
+        }
+        else{
+            for(int i = 2; i <= max; i++){
+                if(i == max){
+                    break;
+                }
+                if(A[i] > A[i+1]){
+                    if(cng1 == 2){
+                        if(A[i] == B[i]){
                             count++;
+                            cng1 = 1;
+                        }
+                    }
+                }else if(A[i] < A[i+1]){
+                    if(cng1 == 1){
+                        if(A[i] == B[i]){
+                            count++;
+                            cng1 = 2;
                         }
                     }
                 }
-                cng1 = 2;
             }
         }
         System.out.println(count);
