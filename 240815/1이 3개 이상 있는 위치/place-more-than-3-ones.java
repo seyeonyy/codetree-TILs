@@ -18,7 +18,7 @@ public class Main {
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
                 int cnt = 0;
-                for(int dirNum = 0; dirNum < n; dirNum++){
+                for(int dirNum = 0; dirNum < 4; dirNum++){
                     int nx = i + dx[dirNum], ny = j + dy[dirNum];
                     if(inRange(nx, ny) && arr[nx][ny] == 1){
                         cnt++;
