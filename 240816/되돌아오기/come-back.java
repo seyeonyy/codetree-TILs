@@ -21,6 +21,9 @@ public class Main {
                 x = x + dx[moveDir];
                 y = y + dy[moveDir];
                 if(x == OFFSET && y == OFFSET){
+                    if(time != 0){
+                        break;
+                    }
                     time = t;
                 }
             }
