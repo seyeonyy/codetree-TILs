@@ -135,6 +135,9 @@ public class Main {
             y += dy1[idx];
             if(cnt % n == 0){
                 idx++;
+                if(idx >= 4) {
+                    idx = 0;
+                }
                 if(x == n){
                     x-=1;
                 }else if(y == n){
