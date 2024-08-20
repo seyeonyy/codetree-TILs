@@ -47,7 +47,7 @@ public class Main {
                     py = -1;
                     px = x;
                 }
-                for(int i = 0; i < n*n; i++){
+                while(inRange(cx, cy)){
                     if(px < cx){
                         if(arr2[cx][cy] == '\\'){
                             count++;
