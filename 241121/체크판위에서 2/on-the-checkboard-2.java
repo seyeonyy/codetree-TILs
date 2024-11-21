@@ -12,26 +12,12 @@ public class Main {
             }
         }
         int count = 0;
-        int x2 = R-1;
-        int y2 = C-1;
-        for(int i = 0; i < R; i++){
-            int cnt = 0;
-            int x = 0;
-            int y = 0;
-            for(int j = 0; j < C; j++){
-                for(int k = i+1; k < R; k++){
-                    if(k == R-1){
-                        if(arr[x][y] != arr[k][C-1]){
-                            if(cnt == 2){
-                                count++;
-                            }
-                        }
-                    }
-                    for(int l = j+1; l < C; l++){
-                        if(k - x >= 1 && l - y >= 1 && arr[x][y] != arr[k][l]){
-                            cnt++;
-                            x = k;
-                            y = l;
+        for(int i = 1; i < R; i++){
+            for(int j = 1; j < C; j++){
+                for(int k = i+1; k < R-1; k++){
+                    for(int l = j+1; l < C-1; l++){
+                        if(arr[0][0] != arr[i][j] && arr[i][j] != arr[k][l] && arr[k][l] != arr[R-1][C-1]){
+                            count++;
                         }
                     }
                 }
