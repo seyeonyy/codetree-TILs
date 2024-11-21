@@ -12,18 +12,22 @@ public class Main {
             }
         }
         int count = 0;
+        int x2 = R-1;
+        int y2 = C-1;
         for(int i = 0; i < R; i++){
             int cnt = 0;
             int x = 0;
             int y = 0;
             for(int j = 0; j < C; j++){
                 for(int k = i+1; k < R; k++){
-                    for(int l = j+1; l < C; l++){
-                        if(k == R-1 && l == C-1){
+                    if(k == R-1){
+                        if(arr[x][y] != arr[k][C-1]){
                             if(cnt == 2){
                                 count++;
                             }
                         }
+                    }
+                    for(int l = j+1; l < C; l++){
                         if(k - x >= 1 && l - y >= 1 && arr[x][y] != arr[k][l]){
                             cnt++;
                             x = k;
