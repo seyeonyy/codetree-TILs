@@ -47,7 +47,7 @@ public class Main {
                 ans = Math.max(ans, max);
             }
         }
-        if(ans == INT_MIN){
+        if(ans == 0){
             System.out.println(-1);
         }else{
             System.out.println(ans);
