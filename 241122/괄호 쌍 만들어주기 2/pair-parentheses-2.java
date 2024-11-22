@@ -6,6 +6,9 @@ public class Main {
         String A = sc.next();
         int count = 0;
         for(int i = 0; i < A.length(); i++){
+            if(i == A.length()-1){
+                break;
+            }
             for(int j = i+1; j <= i+1; j++){
                 if(A.charAt(i) == '(' && A.charAt(j) == '('){
                     for(int k = j+1; k < A.length()-1; k++){
