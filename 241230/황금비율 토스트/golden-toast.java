@@ -16,12 +16,18 @@ public class Main {
         for(int i = 0; i < m; i++){
             char c = sc.next().charAt(0);
             if(c == 'L'){
-                it.previous();
+                if(it.hasPrevious()){
+                    it.previous();
+                }
             }else if(c == 'R'){
-                it.next();
+                if(it.hasNext()){
+                    it.next();
+                }
             }else if(c == 'D'){
-                it.next();
-                it.remove();
+                if(it.hasNext()){
+                    it.next();
+                    it.remove();
+                }
             }else if(c == 'P'){
                 char c2 = sc.next().charAt(0);
                 it.add(c2);
