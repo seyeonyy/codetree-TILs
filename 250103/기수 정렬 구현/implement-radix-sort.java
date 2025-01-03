@@ -21,12 +21,11 @@ public class Main {
     }
     public static void radixSort(){
         for(int pos = 0; pos <= 5; pos++){
-            int num = pos+1;
             for(int i = 0; i < newArr.length; i++){
                 newArr[i].clear();
             }
             for(int i = 0; i < n; i++){
-                int digit = (arr[i] % ((int)Math.pow(10, pos+1))) % ((int)Math.pow(10, num));
+                int digit = (arr[i] % ((int)Math.pow(10, pos))) % 10;
                 newArr[digit].add(arr[i]);
             }
             int index = 0;
