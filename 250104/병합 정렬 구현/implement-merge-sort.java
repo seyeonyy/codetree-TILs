@@ -47,8 +47,8 @@ public class Main {
             mergedArr[k] = arr[j];
             k += 1; j += 1;
         }
-        for(k = low; k <= high; k++){
-            arr[k] = mergedArr[k];
+        for(int l = low; l <= high; l++){
+            arr[l] = mergedArr[l];
         }
     }
 }
