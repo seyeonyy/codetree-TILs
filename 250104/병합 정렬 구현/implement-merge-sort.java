@@ -3,6 +3,7 @@ public class Main {
     public static final int MAX_NUM = 100000;
     public static int[] arr = new int[MAX_NUM];
     public static int n;
+    public static int[] mergedArr = new int[MAX_NUM];
     public static void main(String[] args) {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
@@ -24,7 +25,6 @@ public class Main {
         }
     }
     public static void merge(int arr[], int low, int mid, int high){
-        int[] mergedArr = new int[n];
         int i = low;
         int j = mid+1;
         int k = low;
