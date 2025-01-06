@@ -4,7 +4,6 @@ public class Main {
     public static int[] arr = new int[MAX_INT];
     public static int n;
     public static int pivot;
-    public static int pv;
     public static void main(String[] args) {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
@@ -18,8 +17,9 @@ public class Main {
         }
     }
     public static int partition(int[] arr, int low, int high){
-        pivot = selectPivot(arr, low, high);
-        swap(arr, high, getPivotIndex(arr, low, high, pivot));
+        int pivotIndex = selectPivot(arr, low, high);
+        pivot = arr[pivotIndex];
+        swap(arr, pivotIndex, high);
         int i = low -1;
         for(int j = low; j < high; j++){
             if(arr[j] < pivot){
@@ -29,15 +29,6 @@ public class Main {
         }
         swap(arr, i+1, high);
         return i+1;
-    }
-    public static int getPivotIndex(int[] arr, int low, int high, int pivot){
-        pv = 0;
-        for(int i = 0; i < n; i++){
-            if(arr[i] == pivot){
-                pv = i;
-            }
-        }
-        return pv;
     }
     public static void swap(int[] arr, int i, int j){
         int tmp = arr[i];
@@ -50,13 +41,12 @@ public class Main {
         int b = arr[mid];
         int c = arr[high];
         if((a >= b && b >= c) || (c >= b && b >= a)){
-            pivot = b;
+            return mid;
         }else if((a >= c && c >= b) || (b >=c && c >= a)){
-            pivot = c;
+            return high;
         }else{
-            pivot = a;
+            return low;
         }
-        return pivot;
     }
     public static void quickSort(int[] arr, int low, int high){
         if(low < high){
