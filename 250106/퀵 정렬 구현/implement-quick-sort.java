@@ -4,6 +4,7 @@ public class Main {
     public static int[] arr = new int[MAX_INT];
     public static int n;
     public static int pivot;
+    public static int pv;
     public static void main(String[] args) {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
@@ -30,7 +31,7 @@ public class Main {
         return i+1;
     }
     public static int getPivotIndex(int[] arr, int low, int high, int pivot){
-        int pv = 0;
+        pv = 0;
         for(int i = 0; i < n; i++){
             if(arr[i] == pivot){
                 pv = i;
