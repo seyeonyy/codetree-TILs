@@ -10,6 +10,7 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
         int area1 = 0;
+        int area2 = 0;
         int area3 = 0;
         for(int i = 0; i < 2; i++){
             x1 = sc.nextInt();
@@ -32,6 +33,7 @@ public class Main {
                     for(int k = y1; k <= y2-1; k++){
                         if(square[j][k] == 0){
                             square[j][k] = 2;
+                            area2++;
                         }else{
                             square[j][k] = 3;
                             area3++;
@@ -40,9 +42,17 @@ public class Main {
                 }
             }
         }
-        if(area1 > area3){
-            System.out.println(area1);
-        }else{
+        if(area2 == area3){
+            System.out.println(area1-area2);
+        }
+        else if(area1 > area3){
+            if(area2 >= area1 *2){
+                System.out.println(area1-area3);
+            }else{
+                System.out.println(area1);
+            }
+        }
+        else{
             System.out.println(0);
         }
     }
