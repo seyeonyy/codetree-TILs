@@ -49,7 +49,7 @@ public class Main {
             System.out.println(area1-area2);
         }
         else if(area1 > area3){
-            if(area1 > area2){
+            if(area1 > area2 && area2 > area3){
                 System.out.println(area1-area3);
             }
             else if(area2 >= area1 *2){
