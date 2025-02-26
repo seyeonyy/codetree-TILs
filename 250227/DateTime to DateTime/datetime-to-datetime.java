@@ -10,7 +10,7 @@ public class Main {
         int b = 11;
         int c = 11;
         int cnt = 0;
-        if(A <= a && B <= b && C <= c){
+        if(A <= a && B <= b && C < c){
             System.out.println(-1);
         }else{
             while(true){
