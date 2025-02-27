@@ -42,9 +42,12 @@ public class Main {
                 }
             }
         }
+        // System.out.println(cnt1);
+        // System.out.println(cnt2);
+        // System.out.println(cnt3);
         if(cnt1 == 0){
             System.out.println(cnt1);
-        }else if(cnt3 > cnt1){
+        }else if((cnt1 > cnt2 && cnt2 > cnt3) || (cnt3 > cnt1 && cnt1 > cnt2)){
             System.out.println(cnt1+cnt2);
         }else{
             System.out.println(cnt1);
