@@ -30,7 +30,10 @@ public class Main {
                 }
             }
         }
-        if(bx1 < ax1 && bx2 > ax2 && by1 > ay1 && by2 > ay2){
+        if(cnt == cnt2){
+            System.out.println(0);
+        }
+        else if(bx1 < ax1 && bx2 > ax2 && by1 > ay1 && by2 > ay2){
             System.out.println(cnt - cnt2);
         }else{
             System.out.println(cnt);
