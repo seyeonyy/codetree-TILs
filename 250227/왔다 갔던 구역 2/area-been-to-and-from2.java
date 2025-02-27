@@ -4,8 +4,8 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        int[] arr = new int[100];
-        int cnt = 50;
+        int[] arr = new int[1000];
+        int cnt = 500;
         for(int i = 0; i < N; i++){
             int x = sc.nextInt();
             char c = sc.next().charAt(0);
@@ -22,7 +22,7 @@ public class Main {
             }
         }
         int count = 0;
-        for(int i = 0; i < 100; i++){
+        for(int i = 0; i < 1000; i++){
             if(arr[i] >= 2){
                 count++;
             }
