@@ -26,22 +26,28 @@ public class Main {
                 }
             }
         }
-        int cnt = 0;
+        int cnt1 = 0;
         int cnt2 = 0;
+        int cnt3 = 0;
         for(int i = 0; i < 2000; i++){
             for(int j = 0; j < 2000; j++){
                 if(arr[i][j] == 1){
-                    cnt++;
+                    cnt1++;
                 }
                 if(arr[i][j] == 2){
                     cnt2++;
                 }
+                if(arr[i][j] == 3){
+                    cnt3++;
+                }
             }
         }
-        if(cnt2 > cnt){
-            System.out.println(cnt);
+        if(cnt1 == 0){
+            System.out.println(cnt1);
+        }else if(cnt3 > cnt1){
+            System.out.println(cnt1+cnt2);
         }else{
-            System.out.println(cnt+cnt2);
+            System.out.println(cnt1);
         }
     }
 }
