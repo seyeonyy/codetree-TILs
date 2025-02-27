@@ -12,45 +12,29 @@ public class Main {
         int by1 = sc.nextInt()+1000;
         int bx2 = sc.nextInt()+1000;
         int by2 = sc.nextInt()+1000;
+        int cnt = 0;
         for(int i = ax1; i < ax2; i++){
             for(int j = ay1; j < ay2; j++){
                 arr[i][j] = 1;
+                cnt++;
             }
         }
+        int cnt2 = 0;
         for(int i = bx1; i < bx2; i++){
             for(int j = by1; j < by2; j++){
                 if(arr[i][j] == 1){
                     arr[i][j] = 2;
+                    cnt2++;
                 }else{
                     arr[i][j] = 3;
                 }
             }
         }
-        int cnt1 = 0;
-        int cnt2 = 0;
-        int cnt3 = 0;
-        for(int i = 0; i < 2000; i++){
-            for(int j = 0; j < 2000; j++){
-                if(arr[i][j] == 1){
-                    cnt1++;
-                }
-                if(arr[i][j] == 2){
-                    cnt2++;
-                }
-                if(arr[i][j] == 3){
-                    cnt3++;
-                }
-            }
-        }
-        // System.out.println(cnt1);
-        // System.out.println(cnt2);
-        // System.out.println(cnt3);
-        if(cnt1 == 0){
-            System.out.println(cnt1);
-        }else if((cnt1 > cnt2 && cnt2 > cnt3) || (cnt3 > cnt1 && cnt1 > cnt2)){
-            System.out.println(cnt1+cnt2);
+        if(bx1 < ax1 && bx2 > ax2 && by1 > ay1 && by2 > ay2){
+            System.out.println(cnt - cnt2);
         }else{
-            System.out.println(cnt1);
+            System.out.println(cnt);
         }
+        
     }
 }
