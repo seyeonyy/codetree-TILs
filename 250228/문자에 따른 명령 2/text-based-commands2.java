@@ -11,7 +11,7 @@ public class Main {
         int dirNum = 3;
         for(int i = 0; i < str.length(); i++){
             if(str.charAt(i) == 'L'){
-                dirNum = (dirNum-1)%4;
+                dirNum = (dirNum+3)%4;
             }else if(str.charAt(i) == 'R'){
                 dirNum = (dirNum+1)%4;
             }else{
