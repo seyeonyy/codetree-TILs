@@ -16,8 +16,13 @@ public class Main {
             for(int i = 0; i < T; i++){
                 R += dx[dirNum];
                 C += dy[dirNum];
-                if(!inRange(R, C, N)){
+                if(R < 1){
                     dirNum = 1;
+                    R += dx[dirNum];
+                    C += dy[dirNum];
+                }
+                if(R > N){
+                    dirNum = 3;
                     R += dx[dirNum];
                     C += dy[dirNum];
                 }
@@ -28,8 +33,13 @@ public class Main {
             for(int i = 0; i < T; i++){
                 R += dx[dirNum];
                 C += dy[dirNum];
-                if(!inRange(R, C, N)){
+                if(R > N){
                     dirNum = 3;
+                    R += dx[dirNum];
+                    C += dy[dirNum];
+                }
+                if(R < 1){
+                    dirNum = 1;
                     R += dx[dirNum];
                     C += dy[dirNum];
                 }
@@ -40,10 +50,15 @@ public class Main {
             for(int i = 0; i < T; i++){
                 R += dx[dirNum];
                 C += dy[dirNum];
-                if(!inRange(R, C, N)){
+                if(C > N){
                     dirNum = 2;
                     R += dx[dirNum];
-                    C += dy[dirNum];;
+                    C += dy[dirNum];
+                }
+                if(C < 1){
+                    dirNum = 0;
+                    R += dx[dirNum];
+                    C += dy[dirNum];
                 }
             }
         }
@@ -52,7 +67,12 @@ public class Main {
             for(int i = 0; i < T; i++){
                 R += dx[dirNum];
                 C += dy[dirNum];
-                if(!inRange(R, C, N)){
+                if(C > N){
+                    dirNum = 2;
+                    R += dx[dirNum];
+                    C += dy[dirNum];
+                }
+                if(C < 1){
                     dirNum = 0;
                     R += dx[dirNum];
                     C += dy[dirNum];
