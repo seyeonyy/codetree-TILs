@@ -17,7 +17,7 @@ public class Main {
         int count = 0;
         for(int i = 0; i < N*N; i++){
             int cnt = 0;
-            if(y == N-1){
+            if(y == N){
                 y = 0;
                 x += 1;
             }
@@ -26,10 +26,10 @@ public class Main {
                 int ny = y + dy[j];
                 if(inRange(nx, ny, N) && arr[nx][ny] == 1){
                     cnt++;
-                    if(cnt >= 3){
-                        count++;
-                    }
                 }
+            }
+            if(cnt >= 3){
+                count++;
             }
             y+=1;
         }
