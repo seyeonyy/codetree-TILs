@@ -21,7 +21,7 @@ public class Main {
                     x += dx[dirNum];
                     y += dy[dirNum];
                     arr[x][y] = time;
-                    if(x == 100 && y == 100){
+                    if(x == 100 && y == 100 && t == -1){
                         t = time;
                         System.out.println(t);
                     }
@@ -35,7 +35,7 @@ public class Main {
                     x += dx[dirNum];
                     y += dy[dirNum];
                     arr[x][y] = time;
-                    if(x == 100 && y == 100){
+                    if(x == 100 && y == 100 && t == -1){
                         t = time;
                         System.out.println(t);
                     }
@@ -49,7 +49,7 @@ public class Main {
                     x += dx[dirNum];
                     y += dy[dirNum];
                     arr[x][y] = time;
-                    if(x == 100 && y == 100){
+                    if(x == 100 && y == 100 && t == -1){
                         t = time;
                         System.out.println(t);
                     }
@@ -63,7 +63,7 @@ public class Main {
                     x += dx[dirNum];
                     y += dy[dirNum];
                     arr[x][y] = time;
-                    if(x == 100 && y == 100){
+                    if(x == 100 && y == 100 && t == -1){
                         t = time;
                         System.out.println(t);
                     }
