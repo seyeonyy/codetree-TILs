@@ -22,10 +22,10 @@ public class Main {
             x += dx[dirNum];
             y += dy[dirNum];
             char num = (char)(65+cnt);
-            if(num == 'Z'){
-                cnt = 1;
-            }
             arr[x][y] = num;
+            if(num == 'Z'){
+                cnt = 0;
+            }
             cnt++;
         }
         for(int i = 0; i < N; i++){
