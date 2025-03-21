@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int M = sc.nextInt();
-        int[][] arr = new int[201][201];
+        int[][] arr = new int[300][300];
         for(int i = 0; i < M; i++){
             int r = sc.nextInt()+100;
             int c = sc.nextInt()+100;
