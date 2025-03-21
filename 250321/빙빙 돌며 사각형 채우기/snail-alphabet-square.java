@@ -24,7 +24,7 @@ public class Main {
             char num = (char)(65+cnt);
             arr[x][y] = num;
             if(num == 'Z'){
-                cnt = 0;
+                cnt = -1;
             }
             cnt++;
         }
