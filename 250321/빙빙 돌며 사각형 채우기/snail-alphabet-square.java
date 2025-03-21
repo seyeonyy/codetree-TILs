@@ -12,6 +12,7 @@ public class Main {
         int[] dx = new int[]{0, 1, 0, -1};
         int[] dy = new int[]{1, 0, -1, 0};
         int dirNum = 0;
+        int cnt = 1;
         for(int i = 1; i < N*M; i++){
             int nx = x + dx[dirNum];
             int ny = y + dy[dirNum];
@@ -20,8 +21,12 @@ public class Main {
             }
             x += dx[dirNum];
             y += dy[dirNum];
-            char num = (char)(65+i);
+            char num = (char)(65+cnt);
+            if(num == 'Z'){
+                cnt = 1;
+            }
             arr[x][y] = num;
+            cnt++;
         }
         for(int i = 0; i < N; i++){
             for(int j = 0; j < M; j++){
