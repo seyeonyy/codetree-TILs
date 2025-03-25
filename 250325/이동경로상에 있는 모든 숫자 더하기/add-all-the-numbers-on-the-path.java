@@ -12,7 +12,7 @@ public class Main {
                 arr[i][j] = cnt++;
             }
         }
-        String s = sc.nex;
+        String s = sc.next();
         int[] dx = new int[]{0, 1, 0, -1};
         int[] dy = new int[]{1, 0, -1, 0};
         int dirNum = 3;
