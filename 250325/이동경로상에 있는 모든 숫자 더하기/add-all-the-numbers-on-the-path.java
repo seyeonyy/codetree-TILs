@@ -5,14 +5,13 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int T = sc.nextInt();
-        int cnt = 1;
         int[][] arr = new int[N][N];
+        String s = sc.next();
         for(int i = 0; i < N; i++){
             for(int j = 0; j < N; j++){
-                arr[i][j] = cnt++;
+                arr[i][j] = sc.nextInt();
             }
         }
-        String s = sc.next();
         int[] dx = new int[]{0, 1, 0, -1};
         int[] dy = new int[]{1, 0, -1, 0};
         int dirNum = 3;
@@ -30,8 +29,8 @@ public class Main {
                 if(!inRange(nx, ny, N)){
                     continue;
                 }
-                x += dx[dirNum];
-                y += dy[dirNum];
+                x = nx;
+                y = ny;
                 sum += arr[x][y];
             }
         }
