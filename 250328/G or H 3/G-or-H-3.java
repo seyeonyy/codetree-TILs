@@ -5,13 +5,13 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int K = sc.nextInt();
-        char[] arr = new char[1000001];
+        char[] arr = new char[10001];
         for(int i = 0; i < N; i++){
             int a = sc.nextInt();
-            arr[a-1] = sc.next().charAt(0);
+            arr[a] = sc.next().charAt(0);
         }
         int ans = 0;
-        for(int i = 0; i < N-K+1; i++){
+        for(int i = 1; i < arr.length-K; i++){
             int cnt = 0;
             for(int j = i; j <= i+K; j++){
                 if(arr[j] == 'G'){
