@@ -29,7 +29,9 @@ public class Main {
             }else{
                 char d = sc.next().charAt(0);
                 it.add(d);
-                it.next();
+                if(it.hasNext()){
+                    it.next();
+                }
             }
         }
         it = l.listIterator();
