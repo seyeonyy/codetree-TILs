@@ -22,16 +22,13 @@ public class Main {
                     it.next();
                 }
             }else if(c == 'D'){
-                if(it.hasPrevious()){
-                    it.previous();
+                if(it.hasNext()){
+                    it.next();
+                    it.remove();
                 }
-                it.remove();
             }else{
                 char d = sc.next().charAt(0);
                 it.add(d);
-                if(it.hasNext()){
-                    it.next();
-                }
             }
         }
         it = l.listIterator();
