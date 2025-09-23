@@ -19,6 +19,8 @@ public class Main {
             for(int j = 0; j < n; j++){
                 if(numToIndex.get(j) == num){
                     cnt++;
+                }else{
+                    break;
                 }
             }
             System.out.print(cnt + " ");
