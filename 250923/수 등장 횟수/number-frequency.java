@@ -9,21 +9,24 @@ public class Main {
         int m = sc.nextInt();
         int[] arr = new int[MAX_N];
         HashMap<Integer, Integer> numToIndex = new HashMap<>();
+        int cnt = 1;
         for(int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
-            numToIndex.put(i+1, arr[i]);
+            if(numToIndex.containsKey(arr[i])){
+                int count = numToIndex.get(arr[i]);
+                count += 1;
+                numToIndex.put(arr[i], count);
+            }else{
+                numToIndex.put(arr[i], cnt);
+            }
         }
         for(int i = 0; i < m; i++){
             int num = sc.nextInt();
-            int cnt = 0;
-            for(int j = 1; j <= n; j++){
-                if(numToIndex.get(j) == num){
-                    cnt++;
-                }else{
-                    break;
-                }
+            if(numToIndex.containsKey(num)){
+                System.out.print(numToIndex.get(num) + " ");
+            }else{
+                System.out.print(0 + " ");
             }
-            System.out.print(cnt + " ");
         }
     }
 }
