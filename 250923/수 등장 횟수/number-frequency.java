@@ -11,12 +11,12 @@ public class Main {
         HashMap<Integer, Integer> numToIndex = new HashMap<>();
         for(int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
-            numToIndex.put(i, arr[i]);
+            numToIndex.put(i+1, arr[i]);
         }
         for(int i = 0; i < m; i++){
             int num = sc.nextInt();
             int cnt = 0;
-            for(int j = 0; j < n; j++){
+            for(int j = 1; j <= n; j++){
                 if(numToIndex.get(j) == num){
                     cnt++;
                 }else{
