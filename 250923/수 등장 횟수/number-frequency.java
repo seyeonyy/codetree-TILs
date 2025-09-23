@@ -1,11 +1,13 @@
 import java.util.Scanner;
 import java.util.HashMap;
 public class Main {
+    public static final int MAX_N = 100000;
+    public static final int MAX_M = 100000;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        int[] arr = new int[n];
+        int[] arr = new int[MAX_N];
         HashMap<Integer, Integer> numToIndex = new HashMap<>();
         for(int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
