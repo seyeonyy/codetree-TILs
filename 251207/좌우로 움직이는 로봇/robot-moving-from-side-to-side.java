@@ -3,8 +3,8 @@ public class Main {
     public static void main(String[] args) {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
-        int[] arr1 = new int[50001];
-        int[] arr2 = new int[50001];
+        int[] arr1 = new int[1000000];
+        int[] arr2 = new int[1000000];
         int N = sc.nextInt();
         int M = sc.nextInt();
 
