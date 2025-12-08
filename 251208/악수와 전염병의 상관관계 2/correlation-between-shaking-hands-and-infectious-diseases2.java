@@ -53,16 +53,31 @@ public class Main {
         }
 
         for(int i = 0; i < T; i++){
-            if(X[i] == P || (cnt1[X[i]-1] >= 1 && cnt1[X[i]-1] < K)){
-                if(cnt1[Y[i]-1] < K && cnt1[X[i]-1] < K){
-                    cnt1[X[i]-1]++;
-                    cnt1[Y[i]-1]++;
+            if(K > 1){
+                if(X[i] == P || (cnt1[X[i]-1] >= 1 && cnt1[X[i]-1] < K)){
+                    if(cnt1[Y[i]-1] < K && cnt1[X[i]-1] < K){
+                        cnt1[X[i]-1]++;
+                        cnt1[Y[i]-1]++;
+                    }
                 }
-            }
-            else if(Y[i] == P || (cnt1[Y[i]-1] >= 1 && cnt1[Y[i]-1] < K)){
-                if(cnt1[X[i]-1] < K && cnt1[Y[i]-1] < K){
-                    cnt1[X[i]-1]++;
-                    cnt1[Y[i]-1]++;
+                else if(Y[i] == P || (cnt1[Y[i]-1] >= 1 && cnt1[Y[i]-1] < K)){
+                    if(cnt1[X[i]-1] < K && cnt1[Y[i]-1] < K){
+                        cnt1[X[i]-1]++;
+                        cnt1[Y[i]-1]++;
+                    }
+                }
+            }else{
+                if(X[i] == P || (cnt1[X[i]-1] >= 1 && cnt1[X[i]-1] <= K)){
+                    if(cnt1[Y[i]-1] <= K && cnt1[X[i]-1] <= K){
+                        cnt1[X[i]-1]++;
+                        cnt1[Y[i]-1]++;
+                    }
+                }
+                else if(Y[i] == P || (cnt1[Y[i]-1] >= 1 && cnt1[Y[i]-1] <= K)){
+                    if(cnt1[X[i]-1] <= K && cnt1[Y[i]-1] <= K){
+                        cnt1[X[i]-1]++;
+                        cnt1[Y[i]-1]++;
+                    }
                 }
             }
         }
