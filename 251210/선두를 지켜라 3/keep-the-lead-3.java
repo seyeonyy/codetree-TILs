@@ -18,8 +18,8 @@ public class Main {
         int num = 0;
         int num1 = 0;
         int num2 = 1;
-        int[] A = new int[100000];
-        int[] B = new int[100000];
+        int[] A = new int[1000000];
+        int[] B = new int[1000000];
         int sum = 0;
         for(int i = 0; i < n; i++){
             num1 += a[i][1];
