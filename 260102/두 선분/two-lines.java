@@ -7,13 +7,9 @@ public class Main {
         int x3 = sc.nextInt();
         int x4 = sc.nextInt();
         // Please write your code here.
-        if(x2 <= x3){
+        if(x1 <= x3 && x3 <= x2){
             System.out.println("intersecting");
-        }else if(x1 <= x3){
-            System.out.println("intersecting");
-        }else if(x4 <= x1){
-            System.out.println("intersecting");
-        }else if(x4 <= x2){
+        }else if(x1 <= x4 && x4 <= x2){
             System.out.println("intersecting");
         }else{
             System.out.println("nonintersecting");
