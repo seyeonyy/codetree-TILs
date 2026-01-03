@@ -9,16 +9,21 @@ public class Main {
         // Please write your code here.
         int min = 100;
         int max = 0;
-        if(a <= c){
-            min = a;
-        }else if(c <= a){
-            min = c;
+
+        if((b < c) || (d < a)){
+            System.out.println((b-a)+(d-c));
+        }else{
+            if(a <= c){
+                min = a;
+            }else if(c <= a){
+                min = c;
+            }
+            if(b <= d){
+                max = d; 
+            }else if(d <= b){
+                max = b;
+            }
+            System.out.println(max-min);
         }
-        if(b <= d){
-            max = d; 
-        }else if(d <= b){
-            max = b;
-        }
-        System.out.println(max-min);
     }
 }
