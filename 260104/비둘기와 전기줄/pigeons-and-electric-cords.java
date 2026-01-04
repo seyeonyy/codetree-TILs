@@ -10,18 +10,17 @@ public class Main {
         for (int i = 0; i < N; i++) {
             int pigeon = sc.nextInt();
             int moveDir = sc.nextInt();
-            num[pigeon] += moveDir;
-            if(counts[pigeon] > 0){
-                counts[pigeon] += 1;
-            }else{
-                counts[pigeon] = 1;
+            if(counts[pigeon] >= 1 &&num[pigeon] == 0 && moveDir == 1){
+                cnt++;
             }
-        }
-        for(int i = 1; i <= 10; i++){
-            if(counts[i] > 1){
-                if(num[i] > 0){
-                    cnt += num[i];
-                }
+            else if(counts[pigeon] >= 1&&num[pigeon] == 1 && moveDir == 0){
+                cnt++;
+            }
+            num[pigeon] = moveDir;
+            if(counts[pigeon] == 0){
+                counts[pigeon] = 1;
+            }else{
+                counts[pigeon] += 1;
             }
         }
         System.out.println(cnt);
