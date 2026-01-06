@@ -63,13 +63,17 @@ public class Main {
                 }
             }  
         }
-
         Arrays.sort(arr2);
         for(int i = 0; i <= N; i++){
-            if(arr2[i] != 0){
-                System.out.print(arr2[i] + " ");
+            if(i < N){
+                if(arr2[i] != 0 && arr2[i] != arr2[i+1]){
+                    System.out.print(arr2[i] + " ");
+                }
+            }else{
+                if(arr2[i] != 0){
+                    System.out.print(arr2[i]);
+                }
             }
         }
-
     }
 }
