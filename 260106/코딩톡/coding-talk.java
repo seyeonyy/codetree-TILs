@@ -49,6 +49,9 @@ public class Main {
             if (!found) {
                 arr2[i] = b;
             }
+            if(p == 1){
+                arr2[i] = 0;
+            }
         }
 
         for(int i = 0; i < N; i++){
