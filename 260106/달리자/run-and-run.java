@@ -16,11 +16,9 @@ public class Main {
         int sum = 0;
         for(int i = 0; i < n; i++){
             int d = 1;
-            for(int j = i+1; j < i+2; j++){
-                if(a[i] > b[i]){
-                    sum += d * (a[i] - b[i]);
-                    a[i+1] += a[i] - b[i];
-                }
+            if(a[i] > b[i]){
+                sum += d * (a[i] - b[i]);
+                a[i+1] += a[i] - b[i];
             }
         }
         System.out.println(sum);
