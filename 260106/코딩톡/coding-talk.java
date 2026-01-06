@@ -54,7 +54,8 @@ public class Main {
             }
         }
 
-        for(int i = 0; i < N; i++){
+        Arrays.sort(arr2);
+        for(int i = 0; i <= N; i++){
             if(arr2[i] != 0){
                 System.out.print(arr2[i] + " ");
             }
