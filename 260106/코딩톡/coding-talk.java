@@ -26,6 +26,11 @@ public class Main {
             }else{
                 arr2[i] = 0;
             }
+            if(i < p-1){
+                if(u[i] == u[p-1]){
+                    u[i] = -1;
+                }
+            }
         }
         Arrays.sort(c);
         for(int i = 0; i < M-1; i++){
@@ -52,6 +57,11 @@ public class Main {
             if(p == 1){
                 arr2[i] = 0;
             }
+            if(i < M){
+                if(u[i] == -1){
+                    arr2[i] = 0;
+                }
+            }  
         }
 
         Arrays.sort(arr2);
