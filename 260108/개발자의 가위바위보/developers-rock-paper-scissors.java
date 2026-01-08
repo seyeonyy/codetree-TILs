@@ -14,11 +14,11 @@ public class Main {
             second1[i] = second;
         }
         for(int i = 0; i < n; i++){
-            if(first1[i] == 3 && second1[i] == 1){
+            if(first1[i] == 1 && second1[i] == 2){
                 cnt++;
-            }else if(first1[i] == 3 && second1[i] == 2){
+            }else if(first1[i] == 2 && second1[i] == 3){
                 cnt++;
-            }else if(first1[i] == 1 && second1[i] == 2){
+            }else if(first1[i] == 3 && second1[i] == 1){
                 cnt++;
             }
         }
@@ -49,7 +49,7 @@ public class Main {
         cnt = 0;
 
         for(int i = 0; i < n; i++){
-            if(first1[i] == 1 && second1[i] == 3){
+            if(first1[i] == 1 && second1[i] == 2){
                 cnt++;
             }else if(first1[i] == 2 && second1[i] == 3){
                 cnt++;
