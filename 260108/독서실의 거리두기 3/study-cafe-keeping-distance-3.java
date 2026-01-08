@@ -15,9 +15,18 @@ public class Main {
             }else{
                 cnt = 1;
             }
+            if(seats.charAt(1) == '1'){
+                max = cnt;
+                break;
+            }
             max = Math.max(max, cnt);
         }
-        System.out.println(max/2);
+        if(max == 1){
+            System.out.println(max);
+        }else{
+            System.out.println(max/2);
+        }
+        //System.out.println(max/2);
         // for(int i = 0; i < seats.length(); i++){
         //     if(seats.charAt(i) == 0){
         //         cnt++;
