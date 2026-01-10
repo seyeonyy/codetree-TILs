@@ -8,10 +8,26 @@ public class Main {
         for (int i = 0; i < n; i++) {
             char c = sc.next().charAt(0);
             int s = sc.nextInt();
-            if(c == 'A'){
-                a1[i] += s;
+            if(i == 0){
+                if(c == 'A'){
+                    a1[i] = s;
+                    b1[i] = 0;
+                }else{
+                    b1[i] = s;
+                    a1[i] = 0;
+                }
             }else{
-                b1[i] += s;
+                if(c == 'A'){
+                    a1[i] = a1[i-1]+s;
+                    b1[i] = b1[i-1];
+                }else{
+                    b1[i] = b1[i-1]+s;
+                    a1[i] = a1[i-1];
+                }
+            
+            // System.out.println("c" + c);
+            // System.out.println("a" + a1[i]);
+            // System.out.println("b" + b1[i]);
             }
         }
         int cnt = 0;
@@ -25,8 +41,14 @@ public class Main {
                 if(a1[i] >= b1[i]){
                     cnt++;
                 }
-            }else{
-                if(a1[i] < b1[i]){
+            }else if(a1[i-1] > b1[i-1]){
+                if(a1[i] <= b1[i]){
+                    cnt++;
+                }
+            }else if (a1[i-1] == b1[i-1]){
+                if(a1[i] > b1[i]){
+                    cnt++;
+                }else if(a1[i] < b1[i]){
                     cnt++;
                 }
             }
