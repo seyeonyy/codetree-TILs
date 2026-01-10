@@ -14,17 +14,18 @@ public class Main {
             //System.out.println(arr2[i]);
         }
         int cnt = 0;
-        for(int i = 0; i < n-1; i++){
+        for(int i = 0; i < n; i++){
             if(arr[i] != arr2[i]){
-                char tmp = 'a';
-                for(int j = i+1; j < n; j++){
-                    if(arr[j] == arr2[i]){
-                        tmp = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = tmp;
-                        cnt++;
-                        break;
+                while(arr[i] != arr2[i]){
+                    char tmp = 'a';
+                    for(int j = i+1; j < n; j++){
+                        if(arr2[i] == arr[j]){
+                            tmp = arr[j];
+                            arr[j] = arr[j-1];
+                            arr[j-1] = tmp;
+                        }
                     }
+                    cnt++;
                 }
             }
         }
