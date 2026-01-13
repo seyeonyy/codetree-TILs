@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -10,13 +10,12 @@ public class Main {
         }
         // Please write your code here.
         int max = Integer.MIN_VALUE;
-        for(int i = 0; i < n-2; i++){
-            for(int j = i+1; j < i+2; j++){
-                for(int k = j+1; k < n; k++){
-                    max = Math.max(max, arr[i] * arr[j] * arr[k]);
-                }
-            }
-        }
+        Arrays.sort(arr);
+        int a = arr[0] * arr[1] * arr[n-1];
+        int b = arr[n-1] * arr[n-2] * arr[n-3];
+        
+        max = Math.max(max, a);
+        max = Math.max(max, b);
         System.out.println(max);
     }
 }
