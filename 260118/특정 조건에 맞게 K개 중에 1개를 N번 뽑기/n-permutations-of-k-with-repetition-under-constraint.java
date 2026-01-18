@@ -20,7 +20,7 @@ public class Main {
 
     public static void choose(int currNum){
         if(currNum == n){
-            if(n > 1){
+            if(n > 2){
                 boolean t = true;
                 for(int j = 1; j < n; j++){
                     if(answer.get(0) != answer.get(j)){
