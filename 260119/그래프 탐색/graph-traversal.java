@@ -11,7 +11,11 @@ public class Main {
         int m = sc.nextInt();
         graph = new ArrayList[n + 1];
         visited = new boolean[n + 1];
-        count = -1;
+        if(m == 0){
+            count = 0;
+        }else{
+            count = -1;
+        }
         for (int i = 0; i <= n; i++) {
             graph[i] = new ArrayList<>();
         }
