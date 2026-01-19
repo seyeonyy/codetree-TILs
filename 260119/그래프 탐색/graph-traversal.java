@@ -11,7 +11,7 @@ public class Main {
         int m = sc.nextInt();
         graph = new ArrayList[n + 1];
         visited = new boolean[n + 1];
-        if(m == 0){
+        if(m <= 1){
             count = 0;
         }else{
             count = -1;
