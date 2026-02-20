@@ -40,8 +40,11 @@ public class Main {
             q.add(new Pair(starts[i][0]-1, starts[i][1]-1));
             BFS();
         }
-        System.out.println(count);
-        
+        if(n == 1){
+            System.out.println(1);
+        }else{
+            System.out.println(count);
+        }
     }
 
     public static boolean canGo(int x, int y){
