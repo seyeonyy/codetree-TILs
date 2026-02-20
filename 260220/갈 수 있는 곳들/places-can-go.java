@@ -40,11 +40,7 @@ public class Main {
             q.add(new Pair(starts[i][0]-1, starts[i][1]-1));
             BFS();
         }
-        if(n == 1){
-            System.out.println(1);
-        }else{
-            System.out.println(count);
-        }
+        System.out.println(count);
     }
 
     public static boolean canGo(int x, int y){
@@ -56,13 +52,13 @@ public class Main {
     }
 
     public static void BFS(){
-        dx = new int[]{0, 1, 0, -1};
-        dy = new int[]{1, 0, -1, 0};
+        dx = new int[]{0, 0, 1, 0, -1};
+        dy = new int[]{0, 1, 0, -1, 0};
         while(!q.isEmpty()){
             Pair curr = q.poll();
             int x = curr.x;
             int y = curr.y;
-            for(int i = 0; i < 4; i++){
+            for(int i = 0; i < 5; i++){
                 int newX = x + dx[i];
                 int newY = y + dy[i];
                 if(canGo(newX, newY)){
